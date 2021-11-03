@@ -1,0 +1,47 @@
+﻿@model Test_Zadatak.Models.RadniciViewModel
+
+
+<h2>Spisak Radnika</h2>
+
+@if (Model.radnici.Count == 0)
+{
+    <p>Trenutno nema podataka o radnicima</p>
+}
+else
+{
+
+
+
+<table id="table">
+    <tr>
+        <th>Ime</th>
+        <th>Prezime</th>
+        <th>Adresa</th>
+        <th>Neto plata</th>
+        <th>Bruto Iznos</th>
+        <th>*UPO</th>
+        <th>Koeficijent preracuna</th>
+    </tr>
+    @if (Model != null)
+    {
+        foreach (var radnik in @Model.radnici)
+        {
+<tr>
+    <td>@Html.DisplayFor(modelItem => radnik.Ime)</td>
+    <td>@Html.DisplayFor(modelItem => radnik.Prezime)</td>
+    <td>@Html.DisplayFor(modelItem => radnik.Adresa)</td>
+    <td>@Html.DisplayFor(modelItem => radnik.NetoPlata)</td>
+    <td>@Html.DisplayFor(modelItem => radnik.BrutoIznos)</td>
+    <td>@Html.DisplayFor(modelItem => radnik.UmanjenjePoreskeOsnovice)</td>
+    <td>0.701</td>
+</tr>        
+        }
+    }
+
+
+</table>
+
+<p>*UPO - Umanjenje poreske osnovice po kojoj je bruto iznos racunat(u dinarima).</p>
+<p>*Neto plata i Bruto iznos(u dinarima).</p>
+}
+<p> <a href="../">Home</a></p>

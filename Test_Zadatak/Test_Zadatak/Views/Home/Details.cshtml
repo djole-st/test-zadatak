@@ -1,0 +1,10 @@
+﻿@model Test_Zadatak.Models.Radnik
+
+
+<h2>Da li ste sigurni da zelite da unesete sledece podatke?</h2>
+<p>Ime: @Model.Ime</p>
+<p>Prezime: @Model.Prezime</p>
+<p>Adresa: @Model.Adresa</p>
+<p>Neto plata: @Model.NetoPlata</p>
+
+<p> <a href="../">Ne</a>  &nbsp; @Html.ActionLink("Da", "AddNew", "Home", Model, null)</p>

@@ -1,0 +1,25 @@
+﻿body {
+    margin:auto;
+    width:1200px;
+}
+
+.body-content {
+    padding:10px;
+}
+
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+#table, #table th, #table td{
+    border:1px solid black;
+}
+#table {
+    border-collapse: collapse;
+}
+
+#table th, #table td{
+    padding: 6px 8px;
+}
